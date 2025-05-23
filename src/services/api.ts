@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const api = axios.create({
   // baseURL: 'http://localhost:8080/api', // adjust if needed
-  baseURL: 'https://olio-backend-x2hq.onrender.com', // hosted api base
+  baseURL: 'https://olio-backend-x2hq.onrender.com/api', // hosted api base
 });
 
 api.interceptors.request.use((config) => {
