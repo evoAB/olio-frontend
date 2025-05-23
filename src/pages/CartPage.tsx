@@ -1,18 +1,12 @@
 import { useEffect, useState } from "react";
 import type { Cart } from "../types/Cart";
 import { getCart, removeFromCart, updateQuatity } from "../services/cartApi";
-import {
-  Box,
-  Button,
-  Container,
-  Divider,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Container, Divider, Typography } from "@mui/material";
 import CartItemCard from "../components/CartItemCard";
 import { useNavigate } from "react-router-dom";
 import { placeOrder } from "../services/orderService";
 
-const Cart = () => {
+const CartPage = () => {
   const [cart, setCart] = useState<Cart | null>(null);
   const navigate = useNavigate();
 
@@ -102,4 +96,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default CartPage;

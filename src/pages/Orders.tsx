@@ -7,8 +7,6 @@ import {
   CardContent,
   Container,
   Divider,
-  List,
-  ListItem,
   Typography,
 } from "@mui/material";
 

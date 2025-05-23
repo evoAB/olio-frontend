@@ -3,7 +3,7 @@ import Login from "./pages/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import Register from "./pages/Register";
 import Orders from "./pages/Orders";
-import Cart from "./pages/Cart";
+import Cart from "./pages/CartPage";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import ProductDetails from "./pages/ProductDetails";
