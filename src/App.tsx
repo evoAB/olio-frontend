@@ -17,20 +17,28 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-        <Route
-          path="/"
-          element={
-            <PrivateRoute>
-              <Layout />
-            </PrivateRoute>
-          }
-        >
+        <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="products" element={<Products />} />
           <Route path="categories/:id" element={<CategoryProducts />} />
-          <Route path="cart" element={<Cart />} />
-          <Route path="orders" element={<Orders />} />
           <Route path="products/:id" element={<ProductDetails />} />
+
+          <Route
+            path="cart"
+            element={
+              <PrivateRoute>
+                <Cart />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="orders"
+            element={
+              <PrivateRoute>
+                <Orders />
+              </PrivateRoute>
+            }
+          />
         </Route>
 
         <Route path="*" element={<div>404 - Page Not Found</div>} />

@@ -17,6 +17,15 @@ interface Props {
 
 const ProductCard = ({ product, onAddToCart }: Props) => {
   const navigate = useNavigate();
+  const token = localStorage.getItem("token");
+
+  const handleAddToCart = async () => {
+    if (!token) {
+      navigate("/login");
+      return;
+    }
+    onAddToCart?.(product.id);
+  };
 
   return (
     <Card
@@ -37,7 +46,10 @@ const ProductCard = ({ product, onAddToCart }: Props) => {
         <CardMedia
           component="img"
           height="180"
-          image={product.imageUrl || "https://via.placeholder.com/300x200?text=Product"}
+          image={
+            product.imageUrl ||
+            "https://via.placeholder.com/300x200?text=Product"
+          }
           alt={product.name}
           sx={{ objectFit: "cover" }}
         />
@@ -60,11 +72,7 @@ const ProductCard = ({ product, onAddToCart }: Props) => {
         <Typography variant="h6" color="primary">
           ₹{product.price.toFixed(2)}
         </Typography>
-        <Button
-          size="small"
-          variant="contained"
-          onClick={() =>  onAddToCart?.(product.id)}
-        >
+        <Button size="small" variant="contained" onClick={handleAddToCart}>
           {"Add to Cart"}
         </Button>
       </CardActions>

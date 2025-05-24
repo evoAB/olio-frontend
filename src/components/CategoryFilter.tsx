@@ -1,6 +1,5 @@
 import { Button, Stack } from '@mui/material';
 import type { Category } from '../types/Category';
-// import { Category } from '../types/Category';
 
 interface Props {
   categories: Category[];

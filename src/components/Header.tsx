@@ -37,28 +37,26 @@ const Header = () => {
           </Typography>
         </Box>
 
-        {token && (
-          <Box display="flex" alignItems="center" gap={2}>
-            <IconButton color="primary" onClick={() => navigate("/orders")}>
-              <ListAltIcon />
-            </IconButton>
+        <Box display="flex" alignItems="center" gap={2}>
+          <IconButton color="primary" onClick={() => navigate("/orders")}>
+            <ListAltIcon />
+          </IconButton>
 
-            <IconButton color="primary" onClick={() => navigate("/cart")}>
-              <Badge badgeContent={0} color="error">
-                <ShoppingCartIcon />
-              </Badge>
-            </IconButton>
+          <IconButton color="primary" onClick={() => navigate("/cart")}>
+            <Badge badgeContent={0} color="error">
+              <ShoppingCartIcon />
+            </Badge>
+          </IconButton>
 
-            <Button
-              variant="outlined"
-              color="error"
-              startIcon={<LogoutIcon />}
-              onClick={handleLogout}
-            >
-              Logout
-            </Button>
-          </Box>
-        )}
+          <Button
+            variant="outlined"
+            color="error"
+            startIcon={<LogoutIcon />}
+            onClick={handleLogout}
+          >
+            {token ? "Logout" : "Login"}
+          </Button>
+        </Box>
       </Toolbar>
     </AppBar>
   );

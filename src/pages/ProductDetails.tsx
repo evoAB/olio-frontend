@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import type { Product } from "../types/Product";
 import api from "../services/api";
 import { addToCart } from "../services/cartApi";
 import { Button, CardMedia, Container, Typography } from "@mui/material";
 
 const ProductDetails = () => {
+  const navigate = useNavigate();
+  const token = localStorage.getItem("token");
+
   const { id } = useParams();
   const [product, setProduct] = useState<Product | null>(null);
 
@@ -19,6 +22,10 @@ const ProductDetails = () => {
   };
 
   const handleAddToCart = async () => {
+    if (!token) {
+      navigate("/login");
+      return;
+    }
     if (product) {
       await addToCart(product.id);
       alert("Added to cart!");

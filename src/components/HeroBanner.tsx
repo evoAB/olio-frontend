@@ -1,7 +1,6 @@
 import { Box, Typography } from "@mui/material";
 
 const HeroBanner = () => {
-  // const navigate = useNavigate();
 
   return (
     <Box

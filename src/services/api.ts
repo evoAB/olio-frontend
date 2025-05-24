@@ -1,8 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  // baseURL: 'http://localhost:8080/api', // adjust if needed
-  baseURL: 'https://olio-backend-x2hq.onrender.com/api', // hosted api base
+  baseURL: import.meta.env.VITE_API_URL,
 });
 
 api.interceptors.request.use((config) => {
