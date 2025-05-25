@@ -51,7 +51,7 @@ const Header = () => {
           <Button
             variant="outlined"
             color="error"
-            startIcon={<LogoutIcon />}
+            startIcon={token && <LogoutIcon />}
             onClick={handleLogout}
           >
             {token ? "Logout" : "Login"}
