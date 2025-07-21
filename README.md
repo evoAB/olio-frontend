@@ -4,6 +4,44 @@
 
 ---
 
+### 🚀 Live Demo
+
+👉 [View Live](https://olio-frontend-nlhh.vercel.app/)  
+<!-- 🔐 Admin login enabled (read-only view for public users) -->
+
+---
+
+### 🖼️ Screenshots
+
+#### Login Page
+
+![Login](screenshots/Login.png)
+![Register](screenshots/Register.png)
+
+#### Home View
+
+![Home](screenshots/Home.png)
+![Dashboard Page](screenshots/dashboard2.png)
+
+#### All Product View
+
+![Product](screenshots/Products.png)
+
+#### Product Category View
+
+![Category](screenshots/Category1.png)
+![Category](screenshots/Category2.png)
+
+#### Cart View
+
+![Orders](screenshots/Cart.png)
+
+#### Orders View
+
+![Orders](screenshots/Orders.png)
+
+---
+
 ## ⚙️ Tech Stack
 
 - **React** with **Vite**
