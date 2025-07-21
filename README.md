@@ -21,7 +21,6 @@
 #### Home View
 
 ![Home](screenshots/Home.png)
-![Dashboard Page](screenshots/dashboard2.png)
 
 #### All Product View
 
