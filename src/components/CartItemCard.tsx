@@ -23,7 +23,7 @@ const CartItemCard = ({ item, onRemove, onUpdate }: Props) => {
 
   const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = parseInt(e.target.value);
-    setQuantity(val);
+    setQuantity(val); 
     if (val > 0) {
       onUpdate(item.product.id, val);
     }
