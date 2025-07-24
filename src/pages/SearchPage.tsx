@@ -39,7 +39,9 @@ const SearchPage = () => {
       if (!query) return;
       setLoading(true);
       try {
-        const response = await api.get(`/products?search=${query}`);
+        const response = await api.get(
+          `/products?search=${query}&sortBy=${sortBy}&sortOrder=${order}`
+        );
         setProducts(response.data);
       } catch (err) {
         console.error("Error fetching search results", err);
