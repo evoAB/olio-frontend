@@ -4,7 +4,6 @@ import api from "../services/api";
 import type { Product } from "../types/Product";
 import { Box, CircularProgress, Divider, FormControlLabel, Grid, IconButton, Menu, Radio, RadioGroup, Typography } from "@mui/material";
 import ProductCard from "../components/ProductCard";
-import { SortByAlpha } from "@mui/icons-material";
 import FilterListIcon from "@mui/icons-material/FilterList";
 
 const SearchPage = () => {
