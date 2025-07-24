@@ -2,7 +2,18 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import api from "../services/api";
 import type { Product } from "../types/Product";
-import { Box, CircularProgress, Divider, FormControlLabel, Grid, IconButton, Menu, Radio, RadioGroup, Typography } from "@mui/material";
+import {
+  Box,
+  CircularProgress,
+  Divider,
+  FormControlLabel,
+  Grid,
+  IconButton,
+  Menu,
+  Radio,
+  RadioGroup,
+  Typography,
+} from "@mui/material";
 import ProductCard from "../components/ProductCard";
 import FilterListIcon from "@mui/icons-material/FilterList";
 
@@ -51,16 +62,18 @@ const SearchPage = () => {
   ) : (
     <Box p={3}>
       <Box mb={3} borderBottom={1} borderColor="grey.300" pb={1}>
-        <Typography variant="h5" align="center">
-          Search results for{" "}
-          <Box component="span" fontWeight="bold" color="primary.main">
-            "{query}"
+        <Box display="flex" justifyContent="space-between">
+          <Typography variant="h5" align="center">
+            Search results for{" "}
+            <Box component="span" fontWeight="bold" color="primary.main">
+              "{query}"
+            </Box>
+          </Typography>
+          <Box display="flex" justifyContent="flex-end" mb={2}>
+            <IconButton onClick={handleClick}>
+              <FilterListIcon />
+            </IconButton>
           </Box>
-        </Typography>
-        <Box display="flex" justifyContent="flex-end" mb={2}>
-          <IconButton onClick={handleClick}>
-            <FilterListIcon />
-          </IconButton>
           <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
             <Box px={2} py={1}>
               <Typography variant="subtitle2">Sort By</Typography>
