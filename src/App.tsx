@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Login from "./pages/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import Register from "./pages/Register";
@@ -11,6 +16,7 @@ import Products from "./pages/Products";
 import CategoryProducts from "./pages/CategoryProducts";
 import { ToastContainer } from "react-toastify";
 import SearchPage from "./pages/SearchPage";
+import SellerDashboard from "./pages/SellerDashboard";
 
 const App = () => {
   return (
@@ -43,6 +49,9 @@ const App = () => {
                 </PrivateRoute>
               }
             />
+            <Route path="/seller-dashboard" element={<SellerDashboard />} />
+            {/* <Route path="/seller-dashboard/add-product" element={<AddProduct />} /> */}
+            {/* <Route path="/dashboard/admin" element={<AdminDahboard />} /> */}
           </Route>
 
           <Route path="*" element={<Navigate to="/" />} />

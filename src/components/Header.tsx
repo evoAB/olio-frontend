@@ -10,7 +10,7 @@ import {
   Paper,
   InputBase,
 } from "@mui/material";
-import SearchIcon from '@mui/icons-material/Search';
+import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LogoutIcon from "@mui/icons-material/Logout";
 import ListAltIcon from "@mui/icons-material/ListAlt";
@@ -88,18 +88,42 @@ const Header = () => {
         </Box>
 
         <Box display="flex" alignItems="center" gap={2}>
-          {token && role === "USER" && (
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={handleBecomeSeller}
-              disabled={loading}
-              startIcon={
-                loading && <CircularProgress size={20} color="inherit" />
-              }
-            >
-              {loading ? "Requesting..." : "Become a Seller"}
-            </Button>
+          {token && (
+            <>
+              {role === "USER" && (
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={handleBecomeSeller}
+                  disabled={loading}
+                  startIcon={
+                    loading && <CircularProgress size={20} color="inherit" />
+                  }
+                >
+                  {loading ? "Requesting..." : "Become a Seller"}
+                </Button>
+              )}
+
+              {role === "SELLER" && (
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  onClick={() => navigate("/seller-dashboard")}
+                >
+                  Dashboard
+                </Button>
+              )}
+
+              {role === "ADMIN" && (
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  onClick={() => navigate("/admin/dashboard")}
+                >
+                  Admin Dashboard
+                </Button>
+              )}
+            </>
           )}
 
           <Box component="form" onSubmit={handleSearchSubmit}>
