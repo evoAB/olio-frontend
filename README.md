@@ -53,6 +53,10 @@
 ![Homepage](screenshots/SellerHome.png)
 ![Dashboard](screenshots/SellerDashboard.png)
 ![AddProducts](screenshots/SellerAddProduct.png)
+
+### User Screens
+
+![Homepage](screenshots/UserHome.png)
 ---
 
 ## ⚙️ Tech Stack
