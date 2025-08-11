@@ -17,6 +17,11 @@ import CategoryProducts from "./pages/CategoryProducts";
 import { ToastContainer } from "react-toastify";
 import SearchPage from "./pages/SearchPage";
 import SellerDashboard from "./pages/SellerDashboard";
+import AdminLayout from "./layouts/AdminLayout";
+import AdminDashboard from "./pages/AdminDashboard";
+import AdminCategories from "./pages/AdminCategories";
+import AdminProducts from "./pages/AdminProducts";
+import AdminUsers from "./pages/AdminUsers";
 
 const App = () => {
   return (
@@ -50,8 +55,12 @@ const App = () => {
               }
             />
             <Route path="/seller-dashboard" element={<SellerDashboard />} />
-            {/* <Route path="/seller-dashboard/add-product" element={<AddProduct />} /> */}
-            {/* <Route path="/dashboard/admin" element={<AdminDahboard />} /> */}
+            <Route path="/admin" element={<AdminLayout />}>
+              <Route index element={<AdminDashboard />} />
+              <Route path="categories" element={<AdminCategories />} />
+              <Route path="products" element={<AdminProducts />} />
+              <Route path="users" element={<AdminUsers />} />
+            </Route>
           </Route>
 
           <Route path="*" element={<Navigate to="/" />} />

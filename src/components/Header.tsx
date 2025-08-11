@@ -118,7 +118,7 @@ const Header = () => {
                 <Button
                   variant="contained"
                   color="secondary"
-                  onClick={() => navigate("/admin/dashboard")}
+                  onClick={() => navigate("/admin")}
                 >
                   Admin Dashboard
                 </Button>
