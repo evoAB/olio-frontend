@@ -39,6 +39,20 @@
 
 ![Orders](screenshots/Orders.png)
 
+### Admin Screens
+
+![Homepage](screenshots/AdminHome.png)
+![Dashboard](screenshots/AdminDashboard.png)
+![Categories](screenshots/AdminCategories.png)
+![Add Category](screenshots/AdminAddCategory.png)
+![Products](screenshots/AdminProducts.png)
+![Users](screenshots/AdminUsers.png)
+
+### Seller Screens
+
+![Homepage](screenshots/SellerHome.png)
+![Dashboard](screenshots/SellerDashboard.png)
+![AddProducts](screenshots/SellerAddProduct.png)
 ---
 
 ## ⚙️ Tech Stack
