@@ -79,7 +79,7 @@ const Header = () => {
           display="flex"
           alignItems="center"
           sx={{ cursor: "pointer" }}
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/")} 
         >
           <Storefront sx={{ mr: 1, color: "primary.main" }} />
           <Typography variant="h5" fontWeight="bold" color="primary">
